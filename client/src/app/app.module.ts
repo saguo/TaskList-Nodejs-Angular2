@@ -6,7 +6,7 @@ import { TasksComponent} from './tasks/tasks.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent TasksComponent],
+  declarations: [ AppComponent, TasksComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
