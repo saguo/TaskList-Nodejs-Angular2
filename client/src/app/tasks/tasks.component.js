@@ -14,9 +14,9 @@ var TasksComponent = (function () {
     }
     TasksComponent = __decorate([
         core_1.Component({
-            //moduleId: module.id,
             selector: 'tasks',
-            template: "<p>Tasks<p>",
+            moduleId: module.id,
+            templateUrl: './tasks.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], TasksComponent);
