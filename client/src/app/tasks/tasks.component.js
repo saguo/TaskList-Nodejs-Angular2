@@ -31,6 +31,28 @@ var TasksComponent = (function () {
             _this.title = _this.title;
         });
     };
+    TasksComponent.prototype.deleteTask = function (id) {
+        var tasks = this.tasks;
+        this.taskService.deleteTask(id).subscribe(function (data) {
+            if (data.n == 1) {
+                for (var i = 0; i < tasks.length; i++) {
+                    if (tasks[i]._id == id) {
+                        tasks.splice(i, 1);
+                    }
+                }
+            }
+        });
+    };
+    TasksComponent.prototype.updateStatus = function (task) {
+        var _task = {
+            _id: task._id,
+            title: task.title,
+            isDone: !task.isDone
+        };
+        this.taskService.updateStatus(_task).subscribe(function (data) {
+            task.isDone = task.isDone;
+        });
+    };
     TasksComponent = __decorate([
         core_1.Component({
             selector: 'tasks',
