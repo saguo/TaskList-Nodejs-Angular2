@@ -16,7 +16,7 @@ router.get('/task', function(req, res, next){
 
 });
 
-//Get Singgle Task
+//Get Single Task
 router.get('/task/:id', function(req, res, next){
 	db.tasks.findOne({_id: mongojs.ObjectId(req.params.id)},function(err, tasks){
 			if(err){
