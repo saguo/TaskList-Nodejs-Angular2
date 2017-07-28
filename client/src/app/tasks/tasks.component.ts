@@ -21,10 +21,13 @@ export class TasksComponent {
 		addTask(event){
 			event.preventDefault();
 			var newTask = {
-				title: this.title;
-				isDone: false;
+				title: this.title,
+				isDone: false
 			}
 
-			this.tasks.push(newTask);
+			this.taskService.addTask(newTask).subscribe(task => {
+				this.tasks.push(task);
+				this.title = this.title;
+			});
 		}
 }
