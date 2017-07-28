@@ -2,7 +2,7 @@
 ===============================================================================<br>
 This app was built based on NodeJs, Express, Angular2, Mongodb.
 Basic functions: add tasks, delete tasks, update the status of tasks.
-All data was stored in local mongodb.
+All data was interacted with local mongodb.
 
 # Get start :
 Make sure you already installed mongodb & npm (global)
